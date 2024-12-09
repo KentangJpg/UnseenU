@@ -70,7 +70,7 @@ class item extends CI_Controller
 				'ItemId' => htmlspecialchars($this->input->post('ItemId', true)),
 				'ItemName' => htmlspecialchars($this->input->post('ItemName', true)),
 				'Image' => $image_name,
-				'Categories' => htmlspecialchars($this->input->post('Category', true)),
+				'category_id' => htmlspecialchars($this->input->post('Category', true)),
 				'Price' => htmlspecialchars($this->input->post('Price', true)),
 				'COMS' => htmlspecialchars($this->input->post('COMS', true)),
 				'stock' => htmlspecialchars($this->input->post('stock', true))

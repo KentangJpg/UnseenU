@@ -39,10 +39,10 @@
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="nav nav-underline">
                             <li class="nav-item">
-                                <a class="nav-link text-blue-600" aria-current="page" href="#">Home</a>
+                                <a class="nav-link active text-blue-600" aria-current="page" href="#">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-blue-600" href="#">Series</a>
+                                <a class="nav-link text-blue-600" href="<?= base_url('index.php/series'); ?>">Series</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-blue-600" href="#">Kosong</a>
