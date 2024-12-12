@@ -15,41 +15,36 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <rect width="100%" height="100%" fill="#777" />
-                    </svg>
+                    <img src="<?= base_url('assets/img/banner-1.png'); ?>" alt="">
 
                     <div class="container">
                         <div class="carousel-caption text-start">
-                            <h1>Example headline.</h1>
-                            <p>Some representative placeholder content for the first slide of the carousel.</p>
-                            <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+                            <p><a class="btn btn-lg btn-primary mb-5 ms-5" href="#">
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                    <span>Buy Now</span>
+                                </a></p>
                         </div>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <rect width="100%" height="100%" fill="#777" />
-                    </svg>
-
+                    <img src="<?= base_url('assets/img/banner-2.png') ?>" alt="">
                     <div class="container">
                         <div class="carousel-caption">
-                            <h1>Another example headline.</h1>
-                            <p>Some representative placeholder content for the second slide of the carousel.</p>
-                            <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+                            <p><a class="btn btn-lg btn-primary float-end mb-5" href="#">
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                    <span>Buy Now</span>
+                                </a></p>
                         </div>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <rect width="100%" height="100%" fill="#777" />
-                    </svg>
-
+                    <img src="<?= base_url('assets/img/banner-3.png') ?>" alt="">
                     <div class="container">
                         <div class="carousel-caption text-end">
-                            <h1>One more for good measure.</h1>
-                            <p>Some representative placeholder content for the third slide of this carousel.</p>
-                            <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+                            <p><a class="btn btn-lg btn-primary mb-5" href="#">
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                    <span>Buy Now</span>
+                                </a></p>
                         </div>
                     </div>
                 </div>
@@ -75,9 +70,9 @@
             <div class="row">
                 <div class="col-lg-4">
                     <div class="card shadow" style="width: 18rem;">
-                        <img src="..." class="card-img-top" alt="...">
+                        <img src="<?= base_url('assets/img/ShinchanDessertTime.jpg') ?>" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Nama Produk</h5>
+                            <h5 class="card-title">Shinchan : Dessert Time</h5>
                             <p class="card-text">Deskripsi Produk : Isi deskripsi produk sedikit, tapi jangan terapin harga dulu, add to cart masukkin ke keranjang</p>
                             <a href="#" class="btn btn-primary">
                                 <i class="fa-solid fa-cart-arrow-down"></i>
@@ -88,9 +83,9 @@
                 </div><!-- /.col-lg-4 -->
                 <div class="col-lg-4">
                     <div class="card shadow" style="width: 18rem;">
-                        <img src="..." class="card-img-top" alt="...">
+                        <img src="<?= base_url('assets/img/BunnyMagicSeries.jpg') ?>" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Nama Produk</h5>
+                            <h5 class="card-title">Bunny Magic</h5>
                             <p class="card-text">Deskripsi Produk : Isi deskripsi produk sedikit, tapi jangan terapin harga dulu, add to cart masukkin ke keranjang</p>
                             <a href="#" class="btn btn-primary">
                                 <i class="fa-solid fa-cart-arrow-down"></i>
@@ -99,12 +94,12 @@
                         </div>
                     </div>
                 </div><!-- /.col-lg-4 -->
-                <div class="col-lg-4">
+                <div class="col-lg-4 mb-5">
                     <div class="card shadow" style="width: 18rem;">
-                        <img src="..." class="card-img-top" alt="...">
+                        <img src="<?= base_url('assets/img/DimooNoOneGonnaSleepTonight.jpg') ?>" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Nama Produk</h5>
-                            <p class="card-text">Deskripsi Produk : Isi deskripsi produk sedikit, tapi jangan terapin harga dulu, add to cart masukkin ke keranjang</p>
+                            <h5 class="card-title">Dimoo : Noone's Gonna Sleep Tonight</h5>
+                            <p class="card-text">Deskripsi Produk : Isi deskripsi produk sedikit, tapi jangan terapin harga dulu</p>
                             <a href="#" class="btn btn-primary">
                                 <i class="fa-solid fa-cart-arrow-down"></i>
                                 <span> Add to Cart</span>
@@ -117,11 +112,11 @@
 
             <!-- START THE FEATURETTES -->
 
-            <hr class="featurette-divider">
+            <hr class="border border-primary border-3 mb-5">
 
             <div class="row featurette">
                 <div class="col-md-7">
-                    <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It’ll blow your mind.</span></h2>
+                    <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
                     <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
                 </div>
                 <div class="col-md-5">

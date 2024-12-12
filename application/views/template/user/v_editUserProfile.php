@@ -26,7 +26,7 @@
                 <h3 class="mb-0">Edit Profile</h3>
             </div>
             <div class="card-body">
-                <?= form_open_multipart('index.php/profile/editProfile'); ?>
+                <?= form_open_multipart('index.php/profile/editUserProfile'); ?>
                 <!-- Row 1 -->
                 <div class="form-row mb-3">
                     <div class="form-group col-md-6">
@@ -88,21 +88,22 @@
                         <input type="file" class="custom-file-input" id="image" name="image">
                         <label class="custom-file-label" for="image">Choose File</label>
                     </div>
+
                 </div>
-                <div class="row d-flex justify-content-end">
-                    <a href="<?= base_url('index.php/profile'); ?>" class="btn btn-secondary mr-2">
+                <div class="d-flex float-end">
+                    <a href="<?= base_url('index.php/profile/userProfile'); ?>" class="btn btn-secondary mr-2">
                         <i class="fa-solid fa-ban"></i> Cancel
                     </a>
                     <button type="submit" class="btn btn-primary mx-3">
                         <i class="fa-solid fa-floppy-disk"></i> Save Profile
                     </button>
+
+                    </form>
                 </div>
-                </form>
+
             </div>
 
         </div>
-
-    </div>
 
     </div>
 

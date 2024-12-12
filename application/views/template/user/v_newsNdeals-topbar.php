@@ -39,13 +39,13 @@
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="nav nav-underline">
                             <li class="nav-item">
-                                <a class="nav-link active text-blue-600" aria-current="page" href="#">Home</a>
+                                <a class="nav-link text-blue-600" aria-current="page" href="<?= base_url('index.php/homePage'); ?>">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-blue-600" href="<?= base_url('index.php/newsNdeals'); ?>">News & Deals</a>
+                                <a class="nav-link active text-blue-600" href="<?= base_url('index.php/newsNdeals') ?>">News & Deals</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-blue-600" href="<?= base_url('index.php/series'); ?>">Character</a>
+                                <a class="nav-link text-blue-600" href="<?= base_url('index.php/series') ?>">Character</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-blue-600">Disabled</a>
@@ -78,11 +78,11 @@
                         </a>
                         <!-- Dropdown - User Information -->
                         <div class="dropdown-menu dropdown-menu-end shadow animated--grow-in" aria-labelledby="userDropdown">
-                            <a class="dropdown-item" href="<?= base_url('index.php/profile/userProfile') ?>">
+                            <a class="dropdown-item" href="profile">
                                 <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                 Profile
                             </a>
-                            <a class="dropdown-item" href="<?= base_url('index.php/profile/userChangePW'); ?>">
+                            <a class="dropdown-item" href="profile/changePW">
                                 <i class="fas fa-key fa-sm fa-fw mr-2 text-gray-400"></i>
                                 Change Password
                             </a>
@@ -97,6 +97,7 @@
 
             </nav>
             <!-- End of Topbar -->
+
             <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
                 aria-hidden="true">
                 <div class="modal-dialog" role="document">
@@ -115,6 +116,7 @@
                     </div>
                 </div>
             </div>
+
 
             <!-- Bootstrap core JavaScript-->
             <script src="<?php echo base_url(); ?>assets/vendor/jquery/jquery.min.js"></script>

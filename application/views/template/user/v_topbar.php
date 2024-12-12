@@ -39,13 +39,13 @@
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="nav nav-underline">
                             <li class="nav-item">
-                                <a class="nav-link text-blue-600" aria-current="page" href="#">Home</a>
+                                <a class="nav-link text-blue-600" aria-current="page" href="<?= base_url('index.php/homePage') ?>">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-blue-600" href="#">Series</a>
+                                <a class="nav-link text-blue-600" href="<?= base_url('index.php/newsNdeals') ?>">News & Deals</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-blue-600" href="#">Kosong</a>
+                                <a class="nav-link text-blue-600" href="<?= base_url('index.php/series') ?>">Character</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-blue-600">Disabled</a>
@@ -78,11 +78,11 @@
                         </a>
                         <!-- Dropdown - User Information -->
                         <div class="dropdown-menu dropdown-menu-end shadow animated--grow-in" aria-labelledby="userDropdown">
-                            <a class="dropdown-item" href="profile">
+                            <a class="dropdown-item" href="<?= base_url('index.php/profile/userProfile') ?>">
                                 <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                 Profile
                             </a>
-                            <a class="dropdown-item" href="profile/changePW">
+                            <a class="dropdown-item" href="profile/UserchangePW">
                                 <i class="fas fa-key fa-sm fa-fw mr-2 text-gray-400"></i>
                                 Change Password
                             </a>

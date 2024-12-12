@@ -11,7 +11,11 @@ class auth extends CI_Controller
     public function index()
     {
         if ($this->session->userdata('email')) {
-            redirect('index.php/dashboard');
+            if ($this->session->userdata('role_id') == 1) {
+                redirect('index.php/dashboard');
+            } else if ($this->session->userdata('role_id') == 2) {
+                redirect('index.php/homePage');
+            }
         }
 
         $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email');

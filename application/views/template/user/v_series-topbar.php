@@ -17,6 +17,14 @@
 
     <!-- Custom styles for this template-->
     <link href="<?php echo base_url(); ?>assets/css/sb-admin-2.min.css" rel="stylesheet">
+
+    <style>
+        .custom-size {
+            height: 50px;
+            width: 50px;
+            margin-top: 0;
+        }
+    </style>
 </head>
 
 <body>
@@ -40,13 +48,13 @@
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="nav nav-underline">
                             <li class="nav-item">
-                                <a class="nav-link text-blue-600" aria-current="page" href="#">Home</a>
+                                <a class="nav-link text-blue-600" aria-current="page" href="<?= base_url('index.php/homePage'); ?>">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active text-blue-600" href="#">Series</a>
+                                <a class="nav-link text-blue-600" href="<?= base_url('index.php/newsNdeals'); ?>">News & Deals</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-blue-600" href="#">Kosong</a>
+                                <a class="nav-link active text-blue-600" href="<?= base_url('index.php/series'); ?>">Character</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-blue-600">Disabled</a>
@@ -63,12 +71,46 @@
                         </ul>
                     </div>
                 </div>
-
                 <ul class="navbar-nav">
-                    <li class="nav-item mx-2 cart-margin">
-                        <a href="" class="btn btn-outline-primary px-3 py-2 rounded-pill">
-                            <i class="fa-solid fa-cart-shopping"></i>
+                    <?php
+                    $cart = $this->cart->contents();
+                    $ItemQty = 0;
+                    foreach ($cart as $key => $value) {
+                        $ItemQty = $ItemQty + $value['qty'];
+                    }
+                    ?>
+                    <li class="nav-item dropdown no-arrow mx-1">
+                        <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-cart-shopping fa-fw"></i>
+                            <!-- Counter - Alerts -->
+                            <span class="badge badge-danger badge-counter"><?= $ItemQty ?></span>
                         </a>
+                        <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
+
+                            <h6 class="dropdown-header">
+                                <i class="fas fa-cart-shopping fa-fw"></i>
+                                <span>CART</span>
+                            </h6>
+                            <?php foreach ($cart as $key => $details) {
+                                $img = $this->model_item->get_data_byid($details['id']);
+                            ?>
+                                <a class="dropdown-item d-flex align-items-center">
+                                    <div class="mr-3">
+                                        <img src="<?= base_url('assets/img/item/' . $img['Image']); ?>" alt="" class="custom-size">
+                                    </div>
+                                    <div>
+                                        <h8 class="dropdown-item-title">
+                                            <?= $details['name'] ?>
+                                        </h8>
+                                        <span class="text-sm"><?= $details['qty'] ?> X <?= $details['price'] ?></span> <br />
+                                        </><span class="text-sm text-muted">Rp. <?= $this->cart->format_number($details['subtotal']) ?></span>
+                                    </div>
+                                </a>
+                            <?php } ?>
+                            <a class="dropdown-item text-center small text-primary" href="#"><span>View Cart <i class="fa-solid fa-chevron-right"></i></span></a>
+                            <a class="dropdown-item text-center small text-primary" href="#"> <span>Check Out <i class="fa-solid fa-chevron-right"></i></span></a>
+                        </div>
                     </li>
                     <!-- Nav Item - User Information -->
                     <li class="nav-item no-arrow dropdown">
@@ -98,6 +140,24 @@
 
             </nav>
             <!-- End of Topbar -->
+            <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">x</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                        <div class="modal-footer">
+                            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                            <a class="btn btn-primary" href="<?= base_url('index.php/auth/logout') ?>">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
             <!-- Bootstrap core JavaScript-->

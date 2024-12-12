@@ -42,17 +42,22 @@
                 </div>
                 <div class="modal-body">
                     <div class="container">
-                        <form action="<?php echo base_url('index.php/category/addNewCatg'); ?>" method="post">
-                            <div class="form-group">
-                                <label for="category_id" class="form-label">Category Id</label>
-                                <input type="text" id="category_id" name="category_id" class="form-control" value="<?= isset($next) ? $next : ''; ?>" readonly>
+                        <?= form_open_multipart('index.php/category/addNewCatg'); ?>
+                        <div class="form-group">
+                            <label for="category_id" class="form-label">Category Id</label>
+                            <input type="text" id="category_id" name="category_id" class="form-control" value="<?= isset($next) ? $next : ''; ?>" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="catg" class="form-label">Category</label>
+                            <input type="text" id="catg" name="catg" class="form-control">
+                            <?php echo form_error('catg', '<div class="text-danger">', '</div>'); ?>
+                        </div>
+                        <div class="form-row mb-3">
+                            <div class="form-group col-md-12">
+                                <input type="file" class="custom-file-input" id="image" name="image">
+                                <label class="custom-file-label" for="image">Choose File</label>
                             </div>
-
-                            <div class="form-group">
-                                <label for="catg" class="form-label">Category</label>
-                                <input type="text" id="catg" name="catg" class="form-control">
-                                <?php echo form_error('catg', '<div class="text-danger">', '</div>'); ?>
-                            </div>
+                        </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -110,12 +115,16 @@
                     </div>
                 </div>
             </div>
-
             <script>
                 <?php if (!empty($show_modal) && $show_modal == true): ?>
                     var addCustModal = new bootstrap.Modal(document.getElementById('AddCatg'));
                     addCatgModal.show();
                 <?php endif; ?>
+
+                $('.custom-file-input').on('change', function() {
+                    let fileName = $(this).val().split('\\').pop();
+                    $(this).next('.custom-file-label').addClass("selected").html(fileName);
+                });
             </script>
 
             <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
