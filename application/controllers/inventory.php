@@ -27,7 +27,6 @@ class inventory extends CI_Controller
 	}
 	public function editInventory($ItemId)
 	{
-		$this->load->model('model_inventory');
 		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 		$data['item'] = $this->model_inventory->get_data_byid($ItemId);
 		$this->form_validation->set_rules('ItemId', 'ItemId', 'required');
@@ -43,10 +42,7 @@ class inventory extends CI_Controller
 			$COMS = $this->input->post('COMS');
 			$Stock = $this->input->post('Stock');
 
-			$this->db->set('COMS', $COMS);
-			$this->db->set('Stock', $Stock);
-			$this->db->where('ItemId', $ItemId);
-			$this->db->update('productdetails');
+			$this->model_inventory->update($ItemId, $COMS, $Stock);
 
 
 			$this->session->set_flashdata('Edited', '

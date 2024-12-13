@@ -6,6 +6,7 @@ class profile extends CI_Controller
     {
         parent::__construct();
         $this->load->library('form_validation');
+        $this->load->model('model_profile');
     }
     public function index()
     {
@@ -44,8 +45,8 @@ class profile extends CI_Controller
 
             if ($upload_image) {
                 $config['allowed_types'] = 'gif|jpg|png';
-                $config['max_size']     = '2048';
-                $config['upload_path'] = './assets/img/profile';
+                $config['max_size']      = '2048';
+                $config['upload_path']   = './assets/img/profile';
 
                 $this->load->library('upload', $config);
 
@@ -63,14 +64,7 @@ class profile extends CI_Controller
             }
 
 
-            $this->db->set('name', $name);
-            $this->db->set('gender', $gender);
-            $this->db->set('address', $address);
-            $this->db->set('PoB', $PoB);
-            $this->db->set('DoB', $DoB);
-            $this->db->set('phone_num', $phone_num);
-            $this->db->where('email', $email);
-            $this->db->update('user');
+            $this->model_profile->update($email, $name, $gender, $address, $PoB, $DoB, $phone_num);
 
 
             $this->session->set_flashdata('Edited', '

@@ -6,9 +6,9 @@ class model_category extends CI_Model
         parent::__construct();
     }
 
-    public function insert($data)
+    public function insert($category_data)
     {
-        $query = $this->db->insert('user', $data);
+        $query = $this->db->insert('user', $category_data);
         return $query;
     }
 }

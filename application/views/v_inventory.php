@@ -27,12 +27,12 @@
             <h1 class="text-primary">Inventory</h1>
         </span>
     </div>
-
     <div class="d-flex flex-row-reverse m-4 mt-n5">
         <a href="<?= base_url('index.php/inventory/print'); ?>" class="btn btn-secondary mx-2">
             <li class="fa-solid fa-print"></li> Print
         </a>
     </div>
+    <?= $this->session->flashdata('Edited'); ?>
     <div class="card shadow mb-4">
         <div class="card-body">
             <div class="table-responsive" id="printContent">
@@ -104,14 +104,14 @@
                                     <td><?= htmlspecialchars($item->ItemId); ?></td>
                                     <td><?= htmlspecialchars($item->ItemName); ?></td>
                                     <td><?= htmlspecialchars($item->Categories); ?></td>
-                                    <td><?= htmlspecialchars($item->COMS); ?></td>
+                                    <td> Rp. <?= htmlspecialchars(number_format($item->COMS)); ?></td>
                                     <td><?= htmlspecialchars($item->Stock); ?></td>
                                     <td>
                                         <a href="<?= base_url('index.php/inventory/editInventory/') . $item->ItemId; ?>" class="btn btn-primary me-2" type="button">
                                             <i class="fa-solid fa-pen"></i> Edit
                                         </a> |
-                                        <button class="btn btn-secondary ms-2" data-bs-toggle="modal" data-bs-target="#Itemdetails_<?= $item->ItemId ?>" type="button">
-                                            <i class="fa-solid fa-eye"></i> Details
+                                        <button class="btn btn-info ms-2" data-bs-toggle="modal" data-bs-target="#Itemdetails_<?= $item->ItemId ?>" type="button">
+                                            <span> Details </span><i class="fa-solid fa-chevron-right"></i>
                                         </button>
                                     </td>
                                 </tr>

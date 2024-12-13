@@ -16,6 +16,18 @@
 
     <!-- Custom styles for this template-->
     <link href="<?php echo base_url(); ?>assets/css/sb-admin-2.min.css" rel="stylesheet">
+
+    <style>
+        .custom-size {
+            height: 50px;
+            width: 50px;
+            margin-top: 0;
+        }
+
+        .logo-size {
+            height: 55px;
+        }
+    </style>
 </head>
 
 <body>
@@ -30,8 +42,8 @@
                 <!-- Navbar -->
                 <div class="container-fluid">
                     <a class="navbar-brand" href="#">
-                        <img src="" alt=".">
-                        UnseenU
+                        <img src="<?= base_url('assets/img/UnseenU - Logo.png'); ?>" class="logo-size mx-4" alt=".">
+                    </a>
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -47,9 +59,6 @@
                             <li class="nav-item">
                                 <a class="nav-link text-blue-600" href="<?= base_url('index.php/series') ?>">Character</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-blue-600">Disabled</a>
-                            </li>
 
                             <li>
                                 <form class="d-flex mt-3 mx-5" role="search">
@@ -64,10 +73,45 @@
                 </div>
 
                 <ul class="navbar-nav">
-                    <li class="nav-item mx-2 cart-margin">
-                        <a href="" class="btn btn-outline-primary px-3 py-2 rounded-pill">
-                            <i class="fa-solid fa-cart-shopping"></i>
+                    <?php
+                    $cart = $this->cart->contents();
+                    $ItemQty = 0;
+                    foreach ($cart as $key => $value) {
+                        $ItemQty = $ItemQty + $value['qty'];
+                    }
+                    ?>
+                    <li class="nav-item dropdown no-arrow mx-1">
+                        <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-cart-shopping fa-fw"></i>
+                            <!-- Counter - Alerts -->
+                            <span class="badge badge-danger badge-counter"><?= $ItemQty ?></span>
                         </a>
+                        <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
+
+                            <h6 class="dropdown-header">
+                                <i class="fas fa-cart-shopping fa-fw"></i>
+                                <span>CART</span>
+                            </h6>
+                            <?php foreach ($cart as $key => $details) {
+                                $img = $this->model_item->get_data_byid($details['id']);
+                            ?>
+                                <a class="dropdown-item d-flex align-items-center">
+                                    <div class="mr-3">
+                                        <img src="<?= base_url('assets/img/item/' . $img['Image']); ?>" alt="" class="custom-size">
+                                    </div>
+                                    <div>
+                                        <h8 class="dropdown-item-title">
+                                            <?= $details['name'] ?>
+                                        </h8> <br>
+                                        <span class="text-sm"><?= $details['qty'] ?> X Rp. <?= number_format($details['price'], 0) ?></span> <br />
+                                        </b><span class="text-sm text-muted">Rp. <?= $this->cart->format_number($details['subtotal']) ?></span>
+                                    </div>
+                                </a>
+                            <?php } ?>
+                            <a class="dropdown-item text-center small text-primary" href="#"><span>View Cart <i class="fa-solid fa-chevron-right"></i></span></a>
+                            <a class="dropdown-item text-center small text-primary" href="#"> <span>Check Out <i class="fa-solid fa-chevron-right"></i></span></a>
+                        </div>
                     </li>
                     <!-- Nav Item - User Information -->
                     <li class="nav-item no-arrow dropdown">

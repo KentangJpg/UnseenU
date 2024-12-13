@@ -36,7 +36,7 @@
                     <div class="card-body">
                         <div class="form-group">
                             <label for="ItemId">Item ID</label>
-                            <input type="text" class="form-control" name="ItemId" id="ItemId" value="<?= set_value('ItemId') ?>">
+                            <input type="text" class="form-control" name="ItemId" id="ItemId" value="<?= isset($next) ? $next : ''; ?> " readonly>
                             <?= form_error('ItemId', '<small class="text-danger">', '</small>') ?>
                         </div>
                         <div class="form-group">

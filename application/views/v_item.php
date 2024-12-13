@@ -44,7 +44,7 @@
                 </li>
               </ul>
             </h5>
-            <h5 class="card-title"><?= htmlspecialchars($item->Price); ?></h5>
+            <h5 class="card-title">Rp. <?= htmlspecialchars(number_format($item->Price)); ?></h5>
           </div>
         </div>
       </div>

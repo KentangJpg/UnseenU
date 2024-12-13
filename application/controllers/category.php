@@ -6,6 +6,7 @@ class category extends CI_Controller
     {
         parent::__construct();
         $this->load->library('form_validation');
+        $this->load->model('model_category');
     }
     public function index()
     {
@@ -62,7 +63,7 @@ class category extends CI_Controller
                     return;
                 }
             } else {
-                $image = 'default.jpg'; // Optional: Set a default image if no file is uploaded
+                $image = 'default.jpg';
             }
         }
         $category_data = [
@@ -70,9 +71,9 @@ class category extends CI_Controller
             'category' => $category,
             'image' => $image
         ];
-        $this->db->insert('category', $category_data);
+        $this->model_category->insert($category_data);
 
-        // Redirect or load success message
+
         redirect('index.php/category');
     }
 }

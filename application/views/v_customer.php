@@ -63,12 +63,17 @@
             </div>
         </div>
     </div>
+    <div class="container">
+        <?= $this->session->flashdata('CustAdded') ?>
+    </div>
     <div class="card shadow mb-4 w-50 mx-auto">
         <div class="card-header d-flex flex-row-reverse">
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#AddCust"><i class="fa-solid fa-plus"></i> New Customer</button>
         </div>
         <div class="card-body">
             <div class="table-responsive custom-table mx-4" id="printContent">
+                <div class="container">
+                </div>
                 <table class="table table-striped" id="dataTable" width="90%" cellspacing="0">
                     <thead>
                         <tr>

@@ -47,9 +47,6 @@
                             <li class="nav-item">
                                 <a class="nav-link text-blue-600" href="<?= base_url('index.php/series') ?>">Character</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-blue-600">Disabled</a>
-                            </li>
 
                             <li>
                                 <form class="d-flex mt-3 mx-5" role="search">

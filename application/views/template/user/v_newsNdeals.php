@@ -12,43 +12,13 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <rect width="100%" height="100%" fill="#777" />
-                    </svg>
-
-                    <div class="container">
-                        <div class="carousel-caption text-start">
-                            <h1>Example headline.</h1>
-                            <p>Some representative placeholder content for the first slide of the carousel.</p>
-                            <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
-                        </div>
-                    </div>
+                    <img src="<?= base_url('assets/img/banner/banner-hotdeals-1.png'); ?>" alt="">
                 </div>
                 <div class="carousel-item">
-                    <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <rect width="100%" height="100%" fill="#777" />
-                    </svg>
-
-                    <div class="container">
-                        <div class="carousel-caption">
-                            <h1>Another example headline.</h1>
-                            <p>Some representative placeholder content for the second slide of the carousel.</p>
-                            <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
-                        </div>
-                    </div>
+                    <img src="<?= base_url('assets/img/banner/banner-hotdeals-2.png'); ?>" alt="">
                 </div>
                 <div class="carousel-item">
-                    <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <rect width="100%" height="100%" fill="#777" />
-                    </svg>
-
-                    <div class="container">
-                        <div class="carousel-caption text-end">
-                            <h1>One more for good measure.</h1>
-                            <p>Some representative placeholder content for the third slide of this carousel.</p>
-                            <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
-                        </div>
-                    </div>
+                    <img src="<?= base_url('assets/img/banner/banner-hotdeals-3.png'); ?>" alt="">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
@@ -65,7 +35,7 @@
         <div class="row ms-5">
             <div class="col-lg-3 mb-5">
                 <div class="card shadow" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
+                    <img src="<?= base_url('assets/img/new/1.png') ?>" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Nama Produk</h5>
                         <p class="card-text">Deskripsi Produk : Isi deskripsi produk sedikit, tapi jangan terapin harga dulu, add to cart masukkin ke keranjang</p>
@@ -78,7 +48,7 @@
             </div><!-- /.col-lg-4 -->
             <div class="col-lg-3">
                 <div class="card shadow" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
+                    <img src="<?= base_url('assets/img/new/2.png') ?>" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Nama Produk</h5>
                         <p class="card-text">Deskripsi Produk : Isi deskripsi produk sedikit, tapi jangan terapin harga dulu, add to cart masukkin ke keranjang</p>
@@ -91,7 +61,7 @@
             </div><!-- /.col-lg-4 -->
             <div class="col-lg-3">
                 <div class="card shadow" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
+                    <img src="<?= base_url('assets/img/new/4.png') ?>" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Nama Produk</h5>
                         <p class="card-text">Deskripsi Produk : Isi deskripsi produk sedikit, tapi jangan terapin harga dulu, add to cart masukkin ke keranjang</p>
@@ -104,7 +74,7 @@
             </div><!-- /.col-lg-4 -->
             <div class="col-lg-3">
                 <div class="card shadow" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
+                    <img src="<?= base_url('assets/img/new/5.png') ?>" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Nama Produk</h5>
                         <p class="card-text">Deskripsi Produk : Isi deskripsi produk sedikit, tapi jangan terapin harga dulu, add to cart masukkin ke keranjang</p>
@@ -117,7 +87,7 @@
             </div><!-- /.col-lg-4 -->
             <div class="col-lg-3 mb-5">
                 <div class="card shadow" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
+                    <img src="<?= base_url('assets/img/new/6.png') ?>" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Nama Produk</h5>
                         <p class="card-text">Deskripsi Produk : Isi deskripsi produk sedikit, tapi jangan terapin harga dulu, add to cart masukkin ke keranjang</p>
@@ -130,7 +100,7 @@
             </div><!-- /.col-lg-4 -->
             <div class="col-lg-3">
                 <div class="card shadow" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
+                    <img src="<?= base_url('assets/img/new/7.png') ?>" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Nama Produk</h5>
                         <p class="card-text">Deskripsi Produk : Isi deskripsi produk sedikit, tapi jangan terapin harga dulu, add to cart masukkin ke keranjang</p>
@@ -143,7 +113,7 @@
             </div><!-- /.col-lg-4 -->
             <div class="col-lg-3">
                 <div class="card shadow" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
+                    <img src="<?= base_url('assets/img/new/8.png') ?>" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Nama Produk</h5>
                         <p class="card-text">Deskripsi Produk : Isi deskripsi produk sedikit, tapi jangan terapin harga dulu, add to cart masukkin ke keranjang</p>
@@ -156,7 +126,7 @@
             </div><!-- /.col-lg-4 -->
             <div class="col-lg-3">
                 <div class="card shadow" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
+                    <img src="<?= base_url('assets/img/new/9.png') ?>" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Nama Produk</h5>
                         <p class="card-text">Deskripsi Produk : Isi deskripsi produk sedikit, tapi jangan terapin harga dulu, add to cart masukkin ke keranjang</p>

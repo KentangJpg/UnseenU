@@ -16,6 +16,16 @@ class model_series extends CI_Model
         return $category->result_array();
     }
 
+    public function details($ItemId)
+    {
+        $this->db->SELECT('*');
+        $this->db->FROM('productdetails');
+        $this->db->JOIN('category', 'category.category_id = productdetails.category_id');
+        $this->db->WHERE('ItemId', $ItemId);
+        $result = $this->db->GET();
+        return $result->row();
+    }
+
     public function itemByCatg()
     {
         $this->db->SELECT('category.category AS CategoryName, productdetails.Image AS ItemImage,productdetails.*');

@@ -16,6 +16,8 @@ class model_inventory extends CI_Model
         return $result;
     }
 
+
+
     public function user()
     {
         $email = $this->session->userdata('email');
@@ -36,5 +38,15 @@ class model_inventory extends CI_Model
         } else {
             return false;
         }
+    }
+
+    public function update($ItemId, $COMS, $Stock)
+    {
+        $data = [
+            'COMS' => $COMS,
+            'Stock' => $Stock,
+        ];
+        $this->db->where('ItemId', $ItemId);
+        $this->db->update('productdetails', $data);
     }
 }

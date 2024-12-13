@@ -46,6 +46,18 @@ class item extends CI_Controller
 		$this->form_validation->set_rules('stock', 'stock', 'trim|required');
 
 		if ($this->form_validation->run() == false) {
+			$this->db->select_max('ItemId');
+		$query = $this->db->get('productdetails');
+		$last = $query->row_array();
+
+		if ($last && $last['ItemId'] != null) {
+			$next = $last['ItemId'] + 1;
+		} else {
+			$next = 1;
+		}
+
+		$data['id'] = $this->db->get('productdetails')->result();
+		$data['next'] = $next;
 			$this->load->view('template/v_item-sidebar', $data);
 			$this->load->view('template/v_topbar', $data);
 			$this->load->view('v_addItem', $data);

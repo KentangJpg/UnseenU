@@ -5,6 +5,7 @@ class customer extends CI_Controller
     {
         parent::__construct();
         $this->load->library('form_validation');
+        $this->load->model('model_customer');
     }
     public function index()
     {
@@ -21,7 +22,7 @@ class customer extends CI_Controller
             $next = 1;
         }
 
-        $data['customer'] = $this->db->get('customer')->result();
+        $data['customer'] = $this->db->GET('customer')->result();
         $data['next'] = $next;
 
         $this->load->view('template/v_customer-sidebar', $data);
@@ -41,14 +42,16 @@ class customer extends CI_Controller
             $this->load->view('template/v_topbar', $data);
             $this->load->view('v_customer', $data);
         } else {
-            // Process form submission (e.g., save customer to database)
             $data = [
                 'cust_id' => $this->input->post('custId'),
                 'cust_name' => $this->input->post('cust')
             ];
-            $this->db->insert('customer', $data);
+            $this->model_customer->insert($data);
 
-            // Redirect or load success message
+            $this->session->set_flashdata('CustAdded', '
+				<div class="alert alert-success" role="alert">
+					New Customer Successfully Added
+				</div>');
             redirect('index.php/customer');
         }
     }

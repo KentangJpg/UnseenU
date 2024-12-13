@@ -7,7 +7,19 @@ class cart extends CI_Controller
         parent::__construct();
         $this->load->library('cart');
     }
-    public function index() {}
+    public function index()
+    {
+        if (empty($this->cart->contents())) {
+            redirect('index.php/series');
+        }
+        $data['title'] = "UnseenU | Cart";
+        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+
+        $this->load->view('template/user/v_head', $data);
+        $this->load->view('template/user/v_topbar', $data);
+        $this->load->view('template/user/v_cart', $data);
+        $this->load->view('template/user/v_footer', $data);
+    }
 
     public function add()
     {
@@ -34,7 +46,7 @@ class cart extends CI_Controller
                 'rowid'   => $rowid,
                 'qty'     => $value['qty'] + $qty,
             );
-            $this->cart->update($data);
+            $this->cart->UPDATE($data);
         } else {
             $data = array(
                 'id'      => $item_id,
@@ -42,10 +54,34 @@ class cart extends CI_Controller
                 'qty'     => $qty,
                 'price'   => $price,
             );
-            $this->cart->insert($data);
-
-            // Redirect to the page where the user came from
-            redirect($redirect_page, 'refresh');
+            $this->cart->INSERT($data);
         }
+        redirect($redirect_page, 'refresh');
+    }
+
+    public function delete($rowid)
+    {
+        $this->cart->REMOVE($rowid);
+        redirect('index.php/cart');
+    }
+
+    public function update()
+    {
+        $i = 1;
+        foreach ($this->cart->contents() as $items) {
+            $data = array(
+                'rowid' => $items['rowid'],
+                'qty'   => $this->input->post($i . '[qty]')
+            );
+            $this->cart->UPDATE($data);
+            $i++;
+        }
+        redirect('index.php/cart');
+    }
+
+    public function clear()
+    {
+        $this->cart->destroy();
+        redirect('index.php/cart');
     }
 }

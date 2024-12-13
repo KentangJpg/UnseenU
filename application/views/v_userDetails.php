@@ -31,7 +31,13 @@
                 <div class="col-md-4 d-flex flex-column align-items-center">
                     <img src="<?= base_url('assets/img/profile/') . $user['image'] ?>" class="img-fluid rounded-start m-5" alt="...">
                     <div class="container-fluid display-flex justfiy-content-center">
-                        <h1 class="text-center"><b>ADMIN 1</b></h1>
+                        <h1 class="text-center">
+                            <?php if ($user['role_id'] === 1) : ?>
+                                <b>MEMBER</b>
+                            <?php else : ?>
+                                <b>ADMIN</b>
+                            <?php endif; ?>
+                        </h1>
                     </div>
                 </div>
                 <div class="col-md-8">
@@ -80,7 +86,7 @@
                                 <li class="fa-solid fa-pen"></li> Edit Profile
                             </a>
                             <button class="btn btn-danger mx-3" data-bs-toggle="modal" data-bs-target="#DeleteUser">
-                                <li class="fa-solid fa-trash"></li> Delete Account
+                                <li class="fa-solid fa-user-slash"></li> Delete Account
                             </button>
                         </div>
                         <div class="modal fade" id="DeleteUser" tabindex="-1" aria-labelledby="DeleteUser" aria-hidden="true">

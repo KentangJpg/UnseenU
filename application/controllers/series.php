@@ -18,4 +18,15 @@ class series extends CI_Controller
         $this->load->view('template/user/v_series', $data);
         $this->load->view('template/user/v_footer', $data);
     }
+
+    public function viewDetails($ItemId)
+    {
+        $data['title'] = "UnseenU | Item Details";
+        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+        $data['item'] = $this->model_series->details($ItemId);
+        $this->load->view('template/user/v_head', $data);
+        $this->load->view('template/user/v_series-topbar', $data);
+        $this->load->view('template/user/v_itemDetails', $data);
+        $this->load->view('template/user/v_footer', $data);
+    }
 }
