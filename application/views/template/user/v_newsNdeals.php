@@ -61,7 +61,7 @@
             </div><!-- /.col-lg-4 -->
             <div class="col-lg-3">
                 <div class="card shadow" style="width: 18rem;">
-                    <img src="<?= base_url('assets/img/new/4.png') ?>" class="card-img-top" alt="...">
+                    <img src="<?= base_url('assets/img/new/3.png') ?>" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Nama Produk</h5>
                         <p class="card-text">Deskripsi Produk : Isi deskripsi produk sedikit, tapi jangan terapin harga dulu, add to cart masukkin ke keranjang</p>
@@ -74,7 +74,7 @@
             </div><!-- /.col-lg-4 -->
             <div class="col-lg-3">
                 <div class="card shadow" style="width: 18rem;">
-                    <img src="<?= base_url('assets/img/new/5.png') ?>" class="card-img-top" alt="...">
+                    <img src="<?= base_url('assets/img/new/4.png') ?>" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Nama Produk</h5>
                         <p class="card-text">Deskripsi Produk : Isi deskripsi produk sedikit, tapi jangan terapin harga dulu, add to cart masukkin ke keranjang</p>
@@ -86,6 +86,19 @@
                 </div>
             </div><!-- /.col-lg-4 -->
             <div class="col-lg-3 mb-5">
+                <div class="card shadow" style="width: 18rem;">
+                    <img src="<?= base_url('assets/img/new/5.png') ?>" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Nama Produk</h5>
+                        <p class="card-text">Deskripsi Produk : Isi deskripsi produk sedikit, tapi jangan terapin harga dulu, add to cart masukkin ke keranjang</p>
+                        <a href="#" class="btn btn-primary">
+                            <i class="fa-solid fa-cart-arrow-down"></i>
+                            <span> Add to Cart</span>
+                        </a>
+                    </div>
+                </div>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-3">
                 <div class="card shadow" style="width: 18rem;">
                     <img src="<?= base_url('assets/img/new/6.png') ?>" class="card-img-top" alt="...">
                     <div class="card-body">
@@ -137,9 +150,9 @@
                     </div>
                 </div>
             </div><!-- /.col-lg-4 -->
-            <div class="col-lg-3">
+            <div class="col-lg-3 mb-5">
                 <div class="card shadow" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
+                    <img src="<?= base_url('assets/img/new/10.png') ?>" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Nama Produk</h5>
                         <p class="card-text">Deskripsi Produk : Isi deskripsi produk sedikit, tapi jangan terapin harga dulu, add to cart masukkin ke keranjang</p>
@@ -152,7 +165,7 @@
             </div><!-- /.col-lg-4 -->
             <div class="col-lg-3 mb-5">
                 <div class="card shadow" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
+                    <img src="<?= base_url('assets/img/new/11.png') ?>" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Nama Produk</h5>
                         <p class="card-text">Deskripsi Produk : Isi deskripsi produk sedikit, tapi jangan terapin harga dulu, add to cart masukkin ke keranjang</p>
@@ -165,20 +178,7 @@
             </div><!-- /.col-lg-4 -->
             <div class="col-lg-3 mb-5">
                 <div class="card shadow" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Nama Produk</h5>
-                        <p class="card-text">Deskripsi Produk : Isi deskripsi produk sedikit, tapi jangan terapin harga dulu, add to cart masukkin ke keranjang</p>
-                        <a href="#" class="btn btn-primary">
-                            <i class="fa-solid fa-cart-arrow-down"></i>
-                            <span> Add to Cart</span>
-                        </a>
-                    </div>
-                </div>
-            </div><!-- /.col-lg-4 -->
-            <div class="col-lg-3 mb-5">
-                <div class="card shadow" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
+                    <img src="<?= base_url('assets/img/new/12.png') ?>" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Nama Produk</h5>
                         <p class="card-text">Deskripsi Produk : Isi deskripsi produk sedikit, tapi jangan terapin harga dulu, add to cart masukkin ke keranjang</p>
