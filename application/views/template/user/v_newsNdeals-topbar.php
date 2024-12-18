@@ -9,7 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-
+    <link href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ea590c57b3.js" crossorigin="anonymous"></script>
     <!-- Custom fonts for this template-->
     <link href="<?php echo base_url(); ?>assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
@@ -18,6 +19,10 @@
     <link href="<?php echo base_url(); ?>assets/css/sb-admin-2.min.css" rel="stylesheet">
 
     <style>
+        body {
+            overflow-x: hidden;
+        }
+
         .custom-size {
             height: 50px;
             width: 50px;
@@ -44,7 +49,6 @@
                     <a class="navbar-brand" href="#">
                         <img src="<?= base_url('assets/img/UnseenU - Logo.png'); ?>" class="logo-size mx-4" alt=".">
                     </a>
-                    </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -54,24 +58,18 @@
                                 <a class="nav-link text-blue-600" aria-current="page" href="<?= base_url('index.php/homePage'); ?>">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active text-blue-600" href="<?= base_url('index.php/newsNdeals') ?>">News & Deals</a>
+                                <a class="nav-link active text-blue-600" href="<?= base_url('index.php/newsNdeals'); ?>">News & Deals</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-blue-600" href="<?= base_url('index.php/series') ?>">Character</a>
+                                <a class="nav-link text-blue-600" href="<?= base_url('index.php/series'); ?>">Character</a>
                             </li>
 
+
                             <li>
-                                <form class="d-flex mt-3 mx-5" role="search">
-                                    <input class="form-control rounded-start-pill border-end-0" type="search" placeholder="Search" aria-label="Search">
-                                    <button class="btn btn-outline-secondary opacity-50 rounded-end-pill border-start-0" type="submit">
-                                        <i class="fa-solid fa-magnifying-glass"></i>
-                                    </button>
-                                </form>
                             </li>
                         </ul>
                     </div>
                 </div>
-
                 <ul class="navbar-nav">
                     <?php
                     $cart = $this->cart->contents();
@@ -88,29 +86,39 @@
                             <span class="badge badge-danger badge-counter"><?= $ItemQty ?></span>
                         </a>
                         <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
-
                             <h6 class="dropdown-header">
                                 <i class="fas fa-cart-shopping fa-fw"></i>
                                 <span>CART</span>
                             </h6>
-                            <?php foreach ($cart as $key => $details) {
-                                $img = $this->model_item->get_data_byid($details['id']);
-                            ?>
+                            <?php if (empty($cart)) { ?>
                                 <a class="dropdown-item d-flex align-items-center">
-                                    <div class="mr-3">
-                                        <img src="<?= base_url('assets/img/item/' . $img['Image']); ?>" alt="" class="custom-size">
-                                    </div>
+                                    <span class="text-sm text-muted mx-auto">Cart is Empty</span>
+                                </a>
+                                <?php } else {
+                                foreach ($cart as $key => $details) {
+                                    $img = $this->model_item->get_data_byid($details['id']);
+                                ?>
+                                    <a class="dropdown-item d-flex align-items-center">
+                                        <div class="mr-3">
+                                            <img src="<?= base_url('assets/img/item/' . $img['Image']); ?>" alt="" class="custom-size">
+                                        </div>
+                                        <div>
+                                            <h8 class="dropdown-item-title">
+                                                <?= $details['name'] ?>
+                                            </h8> <br>
+                                            <span class="text-sm"><?= $details['qty'] ?> X Rp. <?= number_format($details['price'], 0) ?></span> <br />
+                                            </b><span class="text-sm text-muted">Rp. <?= $this->cart->format_number($details['subtotal']) ?></span>
+                                        </div>
+                                    </a>
+                                <?php } ?>
+                                <a class="dropdown-item">
                                     <div>
-                                        <h8 class="dropdown-item-title">
-                                            <?= $details['name'] ?>
-                                        </h8> <br>
-                                        <span class="text-sm"><?= $details['qty'] ?> X Rp. <?= number_format($details['price'], 0) ?></span> <br />
-                                        </b><span class="text-sm text-muted">Rp. <?= $this->cart->format_number($details['subtotal']) ?></span>
+                                        <b>Total : </b> <span>Rp. <?= $this->cart->format_number($this->cart->total()); ?></span>
                                     </div>
                                 </a>
                             <?php } ?>
-                            <a class="dropdown-item text-center small text-primary" href="#"><span>View Cart <i class="fa-solid fa-chevron-right"></i></span></a>
-                            <a class="dropdown-item text-center small text-primary" href="#"> <span>Check Out <i class="fa-solid fa-chevron-right"></i></span></a>
+                            <a class="dropdown-item text-center small text-primary" href="<?= base_url('index.php/cart') ?>"><span>View Cart <i class="fa-solid fa-chevron-right"></i></span></a>
+
                         </div>
                     </li>
                     <!-- Nav Item - User Information -->
@@ -141,7 +149,6 @@
 
             </nav>
             <!-- End of Topbar -->
-
             <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
                 aria-hidden="true">
                 <div class="modal-dialog" role="document">

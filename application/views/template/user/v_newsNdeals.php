@@ -37,11 +37,9 @@
                 <div class="card shadow" style="width: 18rem;">
                     <img src="<?= base_url('assets/img/new/1.png') ?>" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Nama Produk</h5>
-                        <p class="card-text">Deskripsi Produk : Isi deskripsi produk sedikit, tapi jangan terapin harga dulu, add to cart masukkin ke keranjang</p>
-                        <a href="#" class="btn btn-primary">
-                            <i class="fa-solid fa-cart-arrow-down"></i>
-                            <span> Add to Cart</span>
+                        <a href="<?= base_url('index.php/series'); ?>" class="btn btn-primary float-end">
+                            <span>View</span>
+                            <i class="fa-solid fa-chevron-right"></i>
                         </a>
                     </div>
                 </div>
@@ -50,11 +48,9 @@
                 <div class="card shadow" style="width: 18rem;">
                     <img src="<?= base_url('assets/img/new/2.png') ?>" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Nama Produk</h5>
-                        <p class="card-text">Deskripsi Produk : Isi deskripsi produk sedikit, tapi jangan terapin harga dulu, add to cart masukkin ke keranjang</p>
-                        <a href="#" class="btn btn-primary">
-                            <i class="fa-solid fa-cart-arrow-down"></i>
-                            <span> Add to Cart</span>
+                        <a href="<?= base_url('index.php/series'); ?>" class="btn btn-primary float-end">
+                            <span>View</span>
+                            <i class="fa-solid fa-chevron-right"></i>
                         </a>
                     </div>
                 </div>
@@ -63,11 +59,9 @@
                 <div class="card shadow" style="width: 18rem;">
                     <img src="<?= base_url('assets/img/new/3.png') ?>" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Nama Produk</h5>
-                        <p class="card-text">Deskripsi Produk : Isi deskripsi produk sedikit, tapi jangan terapin harga dulu, add to cart masukkin ke keranjang</p>
-                        <a href="#" class="btn btn-primary">
-                            <i class="fa-solid fa-cart-arrow-down"></i>
-                            <span> Add to Cart</span>
+                        <a href="<?= base_url('index.php/series'); ?>" class="btn btn-primary float-end">
+                            <span>View</span>
+                            <i class="fa-solid fa-chevron-right"></i>
                         </a>
                     </div>
                 </div>
@@ -76,11 +70,9 @@
                 <div class="card shadow" style="width: 18rem;">
                     <img src="<?= base_url('assets/img/new/4.png') ?>" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Nama Produk</h5>
-                        <p class="card-text">Deskripsi Produk : Isi deskripsi produk sedikit, tapi jangan terapin harga dulu, add to cart masukkin ke keranjang</p>
-                        <a href="#" class="btn btn-primary">
-                            <i class="fa-solid fa-cart-arrow-down"></i>
-                            <span> Add to Cart</span>
+                        <a href="<?= base_url('index.php/series'); ?>" class="btn btn-primary float-end">
+                            <span>View</span>
+                            <i class="fa-solid fa-chevron-right"></i>
                         </a>
                     </div>
                 </div>
@@ -89,11 +81,9 @@
                 <div class="card shadow" style="width: 18rem;">
                     <img src="<?= base_url('assets/img/new/5.png') ?>" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Nama Produk</h5>
-                        <p class="card-text">Deskripsi Produk : Isi deskripsi produk sedikit, tapi jangan terapin harga dulu, add to cart masukkin ke keranjang</p>
-                        <a href="#" class="btn btn-primary">
-                            <i class="fa-solid fa-cart-arrow-down"></i>
-                            <span> Add to Cart</span>
+                        <a href="<?= base_url('index.php/series'); ?>" class="btn btn-primary float-end">
+                            <span>View</span>
+                            <i class="fa-solid fa-chevron-right"></i>
                         </a>
                     </div>
                 </div>
@@ -102,11 +92,9 @@
                 <div class="card shadow" style="width: 18rem;">
                     <img src="<?= base_url('assets/img/new/6.png') ?>" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Nama Produk</h5>
-                        <p class="card-text">Deskripsi Produk : Isi deskripsi produk sedikit, tapi jangan terapin harga dulu, add to cart masukkin ke keranjang</p>
-                        <a href="#" class="btn btn-primary">
-                            <i class="fa-solid fa-cart-arrow-down"></i>
-                            <span> Add to Cart</span>
+                        <a href="<?= base_url('index.php/series'); ?>" class="btn btn-primary float-end">
+                            <span>View</span>
+                            <i class="fa-solid fa-chevron-right"></i>
                         </a>
                     </div>
                 </div>
@@ -115,11 +103,9 @@
                 <div class="card shadow" style="width: 18rem;">
                     <img src="<?= base_url('assets/img/new/7.png') ?>" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Nama Produk</h5>
-                        <p class="card-text">Deskripsi Produk : Isi deskripsi produk sedikit, tapi jangan terapin harga dulu, add to cart masukkin ke keranjang</p>
-                        <a href="#" class="btn btn-primary">
-                            <i class="fa-solid fa-cart-arrow-down"></i>
-                            <span> Add to Cart</span>
+                        <a href="<?= base_url('index.php/series'); ?>" class="btn btn-primary float-end">
+                            <span>View</span>
+                            <i class="fa-solid fa-chevron-right"></i>
                         </a>
                     </div>
                 </div>
@@ -128,11 +114,9 @@
                 <div class="card shadow" style="width: 18rem;">
                     <img src="<?= base_url('assets/img/new/8.png') ?>" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Nama Produk</h5>
-                        <p class="card-text">Deskripsi Produk : Isi deskripsi produk sedikit, tapi jangan terapin harga dulu, add to cart masukkin ke keranjang</p>
-                        <a href="#" class="btn btn-primary">
-                            <i class="fa-solid fa-cart-arrow-down"></i>
-                            <span> Add to Cart</span>
+                        <a href="<?= base_url('index.php/series'); ?>" class="btn btn-primary float-end">
+                            <span>View</span>
+                            <i class="fa-solid fa-chevron-right"></i>
                         </a>
                     </div>
                 </div>
@@ -141,11 +125,9 @@
                 <div class="card shadow" style="width: 18rem;">
                     <img src="<?= base_url('assets/img/new/9.png') ?>" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Nama Produk</h5>
-                        <p class="card-text">Deskripsi Produk : Isi deskripsi produk sedikit, tapi jangan terapin harga dulu, add to cart masukkin ke keranjang</p>
-                        <a href="#" class="btn btn-primary">
-                            <i class="fa-solid fa-cart-arrow-down"></i>
-                            <span> Add to Cart</span>
+                        <a href="<?= base_url('index.php/series'); ?>" class="btn btn-primary float-end">
+                            <span>View</span>
+                            <i class="fa-solid fa-chevron-right"></i>
                         </a>
                     </div>
                 </div>
@@ -154,11 +136,9 @@
                 <div class="card shadow" style="width: 18rem;">
                     <img src="<?= base_url('assets/img/new/10.png') ?>" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Nama Produk</h5>
-                        <p class="card-text">Deskripsi Produk : Isi deskripsi produk sedikit, tapi jangan terapin harga dulu, add to cart masukkin ke keranjang</p>
-                        <a href="#" class="btn btn-primary">
-                            <i class="fa-solid fa-cart-arrow-down"></i>
-                            <span> Add to Cart</span>
+                        <a href="<?= base_url('index.php/series'); ?>" class="btn btn-primary float-end">
+                            <span>View</span>
+                            <i class="fa-solid fa-chevron-right"></i>
                         </a>
                     </div>
                 </div>
@@ -167,11 +147,9 @@
                 <div class="card shadow" style="width: 18rem;">
                     <img src="<?= base_url('assets/img/new/11.png') ?>" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Nama Produk</h5>
-                        <p class="card-text">Deskripsi Produk : Isi deskripsi produk sedikit, tapi jangan terapin harga dulu, add to cart masukkin ke keranjang</p>
-                        <a href="#" class="btn btn-primary">
-                            <i class="fa-solid fa-cart-arrow-down"></i>
-                            <span> Add to Cart</span>
+                        <a href="<?= base_url('index.php/series'); ?>" class="btn btn-primary float-end">
+                            <span>View</span>
+                            <i class="fa-solid fa-chevron-right"></i>
                         </a>
                     </div>
                 </div>
@@ -180,22 +158,14 @@
                 <div class="card shadow" style="width: 18rem;">
                     <img src="<?= base_url('assets/img/new/12.png') ?>" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Nama Produk</h5>
-                        <p class="card-text">Deskripsi Produk : Isi deskripsi produk sedikit, tapi jangan terapin harga dulu, add to cart masukkin ke keranjang</p>
-                        <a href="#" class="btn btn-primary">
-                            <i class="fa-solid fa-cart-arrow-down"></i>
-                            <span> Add to Cart</span>
+                        <a href="<?= base_url('index.php/series'); ?>" class="btn btn-primary float-end">
+                            <span>View</span>
+                            <i class="fa-solid fa-chevron-right"></i>
                         </a>
                     </div>
                 </div>
             </div><!-- /.col-lg-4 -->
         </div><!-- /.row -->
-
-
-
-
-
-
 </body>
 
 </html>

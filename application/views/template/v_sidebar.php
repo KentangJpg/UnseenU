@@ -17,6 +17,13 @@
     <!-- Custom styles for this template-->
     <link href="<?php echo base_url(); ?>assets/css/sb-admin-2.min.css" rel="stylesheet">
 
+    <style>
+        .logo-size {
+            margin-right: 10px;
+            height: 55px;
+        }
+    </style>
+
 </head>
 
 <body id="page-top">
@@ -29,10 +36,8 @@
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-                <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-laugh-wink"></i>
-                </div>
-                <div class="sidebar-brand-text mx-3">UnseenU</div>
+                <img src="<?= base_url('assets/img/logo-outline.png'); ?>" alt="" class="logo-size">
+                <span>UnseenU</span>
             </a>
 
             <!-- Divider -->
@@ -68,13 +73,6 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="category">
-                    <i class="fas fa-fw fa-layer-group"></i>
-                    <span>Category</span>
-                </a>
-            </li>
-
-            <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#journal"
                     aria-expanded="true" aria-controls="journal">
                     <i class="fas fa-fw fa-receipt"></i>
@@ -85,7 +83,7 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <a class="collapse-item" href="invoice">Sales Invoice</a>
                         <a class="collapse-item" href="newInv">New Invoice</a>
-                        <a class="collapse-item" href="">Activity</a>
+                        <a class="collapse-item" href="category">Category</a>
                     </div>
                 </div>
             </li>

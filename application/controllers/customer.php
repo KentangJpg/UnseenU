@@ -44,7 +44,8 @@ class customer extends CI_Controller
         } else {
             $data = [
                 'cust_id' => $this->input->post('custId'),
-                'cust_name' => $this->input->post('cust')
+                'cust_name' => $this->input->post('cust'),
+                'lokasi' => $this->input->post('kota')
             ];
             $this->model_customer->insert($data);
 

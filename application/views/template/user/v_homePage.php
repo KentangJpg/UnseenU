@@ -43,6 +43,10 @@
 
         <div class="container marketing">
 
+            <div class="container">
+                <h1 class="text-primary">BEST SALES!!!</h1>
+            </div>
+            <hr border-3 border-primary>
             <!-- Three columns of text below the carousel -->
             <div class="row">
                 <div class="col-lg-4">
@@ -50,10 +54,9 @@
                         <img src="<?= base_url('assets/img/ShinchanDessertTime.jpg') ?>" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Shinchan : Dessert Time</h5>
-                            <p class="card-text">Deskripsi Produk : Isi deskripsi produk sedikit, tapi jangan terapin harga dulu, add to cart masukkin ke keranjang</p>
-                            <a href="#" class="btn btn-primary">
-                                <i class="fa-solid fa-cart-arrow-down"></i>
-                                <span> Add to Cart</span>
+                            <a href="<?= base_url('index.php/series'); ?>" class="btn btn-primary float-end">
+                                <span> View</span>
+                                <i class="fa-solid fa-chevron-right"></i>
                             </a>
                         </div>
                     </div>
@@ -63,10 +66,9 @@
                         <img src="<?= base_url('assets/img/BunnyMagicSeries.jpg') ?>" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Bunny Magic</h5>
-                            <p class="card-text">Deskripsi Produk : Isi deskripsi produk sedikit, tapi jangan terapin harga dulu, add to cart masukkin ke keranjang</p>
-                            <a href="#" class="btn btn-primary">
-                                <i class="fa-solid fa-cart-arrow-down"></i>
-                                <span> Add to Cart</span>
+                            <a href="<?= base_url('index.php/series'); ?>" class="btn btn-primary float-end">
+                                <span> View</span>
+                                <i class="fa-solid fa-chevron-right"></i>
                             </a>
                         </div>
                     </div>
@@ -76,10 +78,9 @@
                         <img src="<?= base_url('assets/img/DimooNoOneGonnaSleepTonight.jpg') ?>" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Dimoo : Noone's Gonna Sleep Tonight</h5>
-                            <p class="card-text">Deskripsi Produk : Isi deskripsi produk sedikit, tapi jangan terapin harga dulu</p>
-                            <a href="#" class="btn btn-primary">
-                                <i class="fa-solid fa-cart-arrow-down"></i>
-                                <span> Add to Cart</span>
+                            <a href="<?= base_url('index.php/series'); ?>" class="btn btn-primary float-end">
+                                <span> View</span>
+                                <i class="fa-solid fa-chevron-right"></i>
                             </a>
                         </div>
                     </div>
@@ -106,7 +107,7 @@
             <hr class="featurette-divider">
 
             <div class="row featurette">
-                <div class="col-md-7 order-md-2">
+                <div class="col-md-6 order-md-2 ms-5">
                     <h2 class="featurette-heading">PUCKY</h2>
                     <p class="lead">A Pucky Blind Box is a collectible series created by Pop Mart, featuring whimsical and artistic figures designed by the artist Pucky. Each blind box contains one randomly selected figurine from a themed collection, adding an element of surprise to the unboxing experience. Pucky’s designs often draw inspiration from dreamy, magical, and fairy-tale-like aesthetics, with adorable characters such as fairies, clowns, animals, or mythical creatures.
                     </p>

@@ -59,6 +59,14 @@ class cart extends CI_Controller
         redirect($redirect_page, 'refresh');
     }
 
+    function createInv()
+    {
+        $cart = $this->cart->contents();
+        foreach ($cart as $key => $value) {
+            
+        }
+    }
+
     public function delete($rowid)
     {
         $this->cart->REMOVE($rowid);

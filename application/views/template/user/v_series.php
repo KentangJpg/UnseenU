@@ -34,7 +34,7 @@
                             <img src="<?= base_url('assets/img/category/' . $category['image']); ?>" class="card-img-top product-img custom-style" alt="Category Name">
                             <div class="card-body">
                                 <h5 class="card-title"><?= $category['category'] ?></h5>
-                                <a href="#<?= str_replace(' ', '_', $category['category']) ?>" class="btn btn-primary float-end">
+                                <a href="#<?= str_replace(' ', '_', $category['category']) ?>" class="btn btn-primary mb-5 float-end">
                                     <span>View More</span>
                                     <i class="fa-solid fa-chevron-right"></i>
                                 </a>
@@ -64,7 +64,7 @@
 
                 <div class="row">
                     <?php foreach ($category['items'] as $item): ?>
-                        <div class="col-lg-4">
+                        <div class="col-lg-4 gy-5">
                             <?php
                             echo form_open('index.php/cart/add');
                             echo form_hidden('id', $item['ItemId']);
@@ -85,7 +85,7 @@
                                         <i class="fa-solid fa-eye"></i> <span>View Details</span>
                                     </a>
                                     <button type="submit" class="btn btn-sm btn-primary">
-                                        <i class="fa-solid fa-cart-shopping"></i> <span>Buy Now</span>
+                                        <i class="fa-solid fa-cart-shopping"></i> <span>Add to Cart</span>
                                     </button>
                                 </div>
                                 </form>

@@ -1,4 +1,32 @@
 <div class="container">
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-primary">
+                    <h1 class="modal-title fs-5 text-light" id="exampleModalLabel">Payment Details</h1>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <form action="">
+                            <div class="row mb-3">
+                                <label for="CardNum" class="form-label">Card Number</label>
+                                <input type="text" class="form-input form-control" placeholder=" XXX XXX XXX">
+                            </div>
+                            <div class="row">
+                                <label for="cardHolder" class="form-label">Cardholder Name</label>
+                                <input type="text" class="form-control form-input">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel Payment</button>
+                    <a href="<?= base_url('index.php/cart/createInv') ?>" type="button" class="btn btn-primary">Confirm Payment</a>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="card shadow">
         <div class="card-header bg-primary text-light">
             <h2>Shopping Cart</h2>
@@ -58,7 +86,7 @@
                 <div class="col-sm-6">
                     <button type="submit" class="btn btn-primary"><i class="fa-solid fa-save"></i> Update Cart</button>
                     <a href="<?= base_url('index.php/cart/clear') ?>" class="btn btn-danger"><i class="fa-regular fa-trash-can"></i> Delete All</a>
-                    <a href="" class="btn btn-success"><i class="fa-solid fa-cart-shopping"></i> Check Out</a>
+                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-cart-shopping"></i> Check Out</button>
                 </div>
             </div>
             </form>

@@ -45,7 +45,7 @@
                     <a class="navbar-brand" href="#">
                         <img src="<?= base_url('assets/img/UnseenU - Logo.png'); ?>" class="logo-size mx-4" alt=".">
                     </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
@@ -62,12 +62,6 @@
 
 
                             <li>
-                                <form class="d-flex mt-3 mx-5" role="search">
-                                    <input class="form-control rounded-start-pill border-end-0" type="search" placeholder="Search" aria-label="Search">
-                                    <button class="btn btn-outline-secondary opacity-50 rounded-end-pill border-start-0" type="submit">
-                                        <i class="fa-solid fa-magnifying-glass"></i>
-                                    </button>
-                                </form>
                             </li>
                         </ul>
                     </div>
@@ -120,12 +114,12 @@
                                 </a>
                             <?php } ?>
                             <a class="dropdown-item text-center small text-primary" href="<?= base_url('index.php/cart') ?>"><span>View Cart <i class="fa-solid fa-chevron-right"></i></span></a>
-                            <a class="dropdown-item text-center small text-primary" href="#"> <span>Check Out <i class="fa-solid fa-chevron-right"></i></span></a>
+
                         </div>
                     </li>
                     <!-- Nav Item - User Information -->
                     <li class="nav-item no-arrow dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?= $user['name']; ?></span>
                             <img class="img-profile rounded-circle"
                                 src="<?= base_url('assets/img/profile/') . $user['image'] ?>">

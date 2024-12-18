@@ -24,7 +24,6 @@
 <body>
     <?php if (isset($show_modal) && $show_modal): ?>
         <script type="text/javascript">
-            // This will automatically open the modal when validation fails
             $(document).ready(function() {
                 $('#AddCust').modal('show');
             });
@@ -53,6 +52,20 @@
                                 <input type="text" id="cust" name="cust" class="form-control">
                                 <?php echo form_error('cust', '<div class="text-danger">', '</div>'); ?>
                             </div>
+
+                            <div class="form-group">
+                                <label for="cust_prov" class="form-label">Province</label>
+                                <select name="provinsi" class="form-control"></select>
+                                <!-- <input type="text" id="cust" name="cust" class="form-control"> -->
+                                <?php echo form_error('cust_prov', '<div class="text-danger">', '</div>'); ?>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="cust_city" class="form-label">City</label>
+                                <select name="kota" class="form-control"></select>
+                                <!-- <input type="text" id="cust" name="cust" class="form-control"> -->
+                                <?php echo form_error('cust_city', '<div class="text-danger">', '</div>'); ?>
+                            </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -63,28 +76,25 @@
             </div>
         </div>
     </div>
-    <div class="container">
-        <?= $this->session->flashdata('CustAdded') ?>
-    </div>
     <div class="card shadow mb-4 w-50 mx-auto">
         <div class="card-header d-flex flex-row-reverse">
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#AddCust"><i class="fa-solid fa-plus"></i> New Customer</button>
         </div>
         <div class="card-body">
             <div class="table-responsive custom-table mx-4" id="printContent">
-                <div class="container">
-                </div>
                 <table class="table table-striped" id="dataTable" width="90%" cellspacing="0">
                     <thead>
                         <tr>
                             <th>Customer Id</th>
                             <th>Name</th>
+                            <th>Kode Lokasi</th>
                         </tr>
                     </thead>
                     <tfoot>
                         <tr>
                             <th>Customers Id</th>
                             <th>Name</th>
+                            <th>Kode Lokasi </th>
                         </tr>
                     </tfoot>
                     <tbody>
@@ -92,6 +102,7 @@
                             <tr>
                                 <td><?= htmlspecialchars($cust->cust_id) ?></td>
                                 <td><?= htmlspecialchars($cust->cust_name) ?></td>
+                                <td><?= htmlspecialchars($cust->lokasi) ?></td>
                             </tr>
                         <?php endforeach; ?>
                     </tbody>
@@ -123,6 +134,30 @@
                 <?php endif; ?>
             </script>
 
+            <script>
+                $(document).ready(function() {
+                    $.ajax({
+                        type: "POST",
+                        url: "<?= base_url('index.php/rajaongkir/provinsi') ?>",
+                        success: function(hasil_provinsi) {
+                            console.log(hasil_provinsi);
+                            $("select[name=provinsi]").html(hasil_provinsi);
+                        }
+                    });
+                    $("select[name=provinsi]").on("change", function() {
+                        var id_provinsi_Terpilih = $("option:selected", this).attr("id_provinsi");
+
+                        $.ajax({
+                            type: 'POST',
+                            url: "<?= base_url('index.php/rajaongkir/kota'); ?>",
+                            data: 'id_provinsi=' + id_provinsi_Terpilih,
+                            success: function(hasil_kota) {
+                                $("select[name=kota]").html(hasil_kota);
+                            }
+                        });
+                    });
+                });
+            </script>
             <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
