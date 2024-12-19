@@ -10,16 +10,17 @@ class invoice extends CI_Controller
     }
         
 
-    public function invoice()
-    {
-        $data['title'] = "Invoice";
-        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
-        $data['invoice'] = $this->model_invoice->tampil_data();
-        
+    public function index()
+	{
+		//page title
+		$data['title'] = "UnseenU | Invoice";
+		//fetch user data
+		$data['user'] = $this->model_invoice->user();
+		//fetch items for inventory
+		$data['invoice'] =  $this->db->GET('invoice')->result();
 
-        $this->load->view('template/v_sidebar');
-        $this->load->view('template/v_topbar', $data);
-        $this->load->view('v_invoice', $data);
-    }
-
+		$this->load->view('template/v_inventory-sidebar', $data);
+		$this->load->view('template/v_topbar', $data);
+		$this->load->view('v_invoice', $data);
+	}
 }

@@ -9,6 +9,13 @@ class model_invoice extends CI_Model {
         $this->load->database();
     }
 
+    public function user()
+    {
+        $email = $this->session->userdata('email');
+        $query = $this->db->get_where('user', ['email' => $email]);
+        return $query->row_array();
+    }
+
     // Insert invoice data and return the inserted ID
     public function insert_invoice($data)
     {
@@ -24,7 +31,7 @@ class model_invoice extends CI_Model {
 
     public function tampil_data() {
         $this->db->order_by('invoice_date', 'DESC'); // Order by date descending
-        $query = $this->db->get('invoices'); // Replace 'invoices' with your actual table name if different
+        $query = $this->db->get('invoice'); // Replace 'invoices' with your actual table name if different
         return $query->result();
     }
 

@@ -13,8 +13,8 @@
                                 <label for="paymentMethod" class="form-label">Payment Method</label>
                                 <select name="paymentMethod" class="form-control" required>
                                     <option value="">Select Payment Method</option>
-                                    <option value="credit_card">Credit Card</option>
-                                    <option value="paypal">PayPal</option>
+                                    <option value="Credit Card">Credit Card</option>
+                                    <option value="Paypal">PayPal</option>
                                     <!-- Add more payment methods as needed -->
                                 </select>
                             </div>

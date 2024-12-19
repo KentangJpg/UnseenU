@@ -64,7 +64,7 @@ class cart extends CI_Controller
     function createInv()
     {
          // Validate form inputs
-         $this->form_validation->set_rules('paymentMethod', 'Payment Method', 'required|in_list[credit_card,paypal]');
+         $this->form_validation->set_rules('paymentMethod', 'Payment Method', 'required|in_list[Credit Card,PayPal]');
 
          if ($this->form_validation->run() == FALSE) {
              // Validation failed, redirect back with errors
